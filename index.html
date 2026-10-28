@@ -61,12 +61,12 @@
 
         /* Filter Controls */
         .filter-section {
-            max-width: 720px;
+            max-width: 760px;
             margin: 0 auto 32px auto;
             background: rgba(30, 41, 59, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 18px;
-            padding: 20px 24px;
+            padding: 22px 26px;
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -82,7 +82,7 @@
             font-size: 0.9rem;
             font-weight: 700;
             color: #e2e8f0;
-            min-width: 82px;
+            min-width: 90px;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -97,9 +97,9 @@
             background: #1e293b;
             color: var(--text-sub);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 7px 18px;
+            padding: 6px 16px;
             border-radius: 9999px;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
@@ -118,10 +118,10 @@
 
         /* Grid */
         .quiz-grid {
-            max-width: 840px;
+            max-width: 860px;
             margin: 0 auto 48px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
             gap: 24px;
         }
         .quiz-card {
@@ -163,13 +163,18 @@
         .badges {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
         .badge {
-            padding: 4px 12px;
-            border-radius: 8px;
-            font-size: 0.82rem;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
             font-weight: 700;
+        }
+        .badge-year {
+            background: rgba(168, 85, 247, 0.2);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.4);
         }
         .badge-grade {
             background: rgba(245, 158, 11, 0.2);
@@ -182,14 +187,14 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
         .card-title {
-            font-size: 1.2rem;
+            font-size: 1.18rem;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 10px;
             line-height: 1.4;
         }
         .card-scope {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: var(--text-sub);
             margin-bottom: 20px;
             flex-grow: 1;
@@ -275,7 +280,7 @@
 
         /* Disclaimer Section */
         .disclaimer-section {
-            max-width: 840px;
+            max-width: 860px;
             margin: 0 auto;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 32px;
@@ -341,6 +346,16 @@
     </header>
 
     <div class="filter-section">
+        <!-- 學年度分類 -->
+        <div class="filter-row">
+            <span class="filter-label">📅 學年度</span>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="year" data-val="all">全部學年度</button>
+                <button class="filter-btn" data-filter="year" data-val="115">115學年度</button>
+                <button class="filter-btn" data-filter="year" data-val="114">114學年度</button>
+                <button class="filter-btn" data-filter="year" data-val="116">116學年度</button>
+            </div>
+        </div>
         <!-- 年段分類 -->
         <div class="filter-row">
             <span class="filter-label">🎓 年段分類</span>
@@ -365,16 +380,17 @@
 
     <main class="quiz-grid" id="quizGrid">
         
-        <div class="quiz-card" data-grade="grade8" data-version="nani" data-chapter="ch3">
+        <div class="quiz-card" data-year="115" data-grade="grade8" data-version="nani" data-chapter="ch3">
             <div class="card-header">
                 <span class="icon-bubble">🌊</span>
                 <div class="badges">
+                    <span class="badge badge-year">📅 115學年度</span>
                     <span class="badge badge-grade">八年級理化</span>
                     <span class="badge" style="background-color: #2563eb25; color: #2563eb; border: 1px solid #2563eb50;">南一版 第 6 回</span>
                     <span class="badge badge-sub">第3章 波動與聲音</span>
                 </div>
             </div>
-            <h3 class="card-title">南一自然3 第6回：§3-1～§3-2 波動與聲音的世界</h3>
+            <h3 class="card-title">115學年度 南一自然3 第6回：§3-1～§3-2 波動與聲音的世界</h3>
             <p class="card-scope">波速公式、橫波縱波、傳聲介質（全卷 30 題動態語音解題動畫）</p>
             <div class="card-url-box">
                 <span class="url-text">/nani-ch3-waves.html</span>
@@ -389,16 +405,17 @@
         </div>
         
 
-        <div class="quiz-card" data-grade="grade8" data-version="jinan" data-chapter="ch3">
+        <div class="quiz-card" data-year="115" data-grade="grade8" data-version="jinan" data-chapter="ch3">
             <div class="card-header">
                 <span class="icon-bubble">🔊</span>
                 <div class="badges">
+                    <span class="badge badge-year">📅 115學年度</span>
                     <span class="badge badge-grade">八年級理化</span>
                     <span class="badge" style="background-color: #05966925; color: #059669; border: 1px solid #05966950;">金安版 第 5 回</span>
                     <span class="badge badge-sub">第3章 波動與聲音</span>
                 </div>
             </div>
-            <h3 class="card-title">金安自然3 第5回：§3-1～§3-2 波的傳播與聲音</h3>
+            <h3 class="card-title">115學年度 金安自然3 第5回：§3-1～§3-2 波的傳播與聲音</h3>
             <p class="card-scope">波的分類與性質、連續週期波振幅與波長、聲音的產生與傳播特性（全卷動態語音解題動畫）</p>
             <div class="card-url-box">
                 <span class="url-text">/jinan-ch3-waves.html</span>
@@ -426,7 +443,7 @@
                 <span>⚖️</span>
                 <span>教學非營利使用版權與法律免責聲明</span>
             </div>
-            <p>1. <strong>專屬教學非營利目的</strong>：本網站所載之一切互動語音解題動畫與題庫資源，<strong>僅限於臺中市立大墩國中 鍾承翰老師 課堂教學講解使用，以及所授課學生課後自學、個別化輔導與複習使用</strong>，絕無任何商業營利販售之行為。</p>
+            <p>1. <strong>專屬教學非營利目的</strong>：本網站所載之一切互動語音解題動畫與題庫資源，<strong>僅限於臺中市立大墩國中 鍾承翰老師 課堂教學講解使用，以及所授課班級學生課後自學、個別化輔導與複習使用</strong>，絕無任何商業營利販售之行為。</p>
             <p>2. <strong>原出版單位智慧財產權歸屬</strong>：本教材中所引用、分析之各版本試卷題目、題幹與圖表內容，其著作權與智慧財產權<strong>均分別歸屬於各原出版事業單位（南一書局、金安文教等）所有</strong>。</p>
             <p>3. <strong class="warning">嚴禁未經授權惡意破解與外流</strong>：本站所有教學內容均以加密保護。未經合法授權，<strong>嚴禁任何未經許可之破解、側錄、轉載、重製或公開外流散布行為</strong>；若執意破解外流或作其他非教學用途，相關法律民刑事責任與後果請自行負責。</p>
         </div>
@@ -455,7 +472,8 @@
             setTimeout(() => toast.classList.remove('show'), 2500);
         }
 
-        // Combined Filter Logic (Grade + Version)
+        // Combined Filter Logic (Year + Grade + Version)
+        let selectedYear = 'all';
         let selectedGrade = 'all';
         let selectedVersion = 'all';
 
@@ -466,10 +484,11 @@
         function applyFilters() {
             let visibleCount = 0;
             cards.forEach(card => {
+                const matchYear = (selectedYear === 'all') || (card.getAttribute('data-year') === selectedYear);
                 const matchGrade = (selectedGrade === 'all') || (card.getAttribute('data-grade') === selectedGrade);
                 const matchVersion = (selectedVersion === 'all') || (card.getAttribute('data-version') === selectedVersion);
 
-                if (matchGrade && matchVersion) {
+                if (matchYear && matchGrade && matchVersion) {
                     card.style.display = 'flex';
                     visibleCount++;
                 } else {
@@ -492,6 +511,7 @@
                 document.querySelectorAll(`.filter-btn[data-filter="${filterType}"]`).forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
 
+                if (filterType === 'year') selectedYear = val;
                 if (filterType === 'grade') selectedGrade = val;
                 if (filterType === 'version') selectedVersion = val;
 
