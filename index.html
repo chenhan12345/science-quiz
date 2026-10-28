@@ -23,10 +23,10 @@
             color: var(--text-main);
             line-height: 1.6;
             min-height: 100vh;
-            padding: 30px 20px 80px 20px;
+            padding: 40px 20px 80px 20px;
         }
         .header {
-            max-width: 1160px;
+            max-width: 900px;
             margin: 0 auto 36px auto;
             text-align: center;
         }
@@ -55,140 +55,62 @@
         .subtitle {
             color: var(--text-sub);
             font-size: 1.05rem;
-            max-width: 720px;
+            max-width: 680px;
             margin: 0 auto;
-        }
-        .password-banner {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(245, 158, 11, 0.12);
-            border: 1px solid rgba(245, 158, 11, 0.35);
-            color: #fcd34d;
-            padding: 10px 22px;
-            border-radius: 12px;
-            margin-top: 18px;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-        .password-banner code {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 2px 8px;
-            border-radius: 6px;
-            color: #ffffff;
-            letter-spacing: 1px;
-            font-family: monospace;
-            font-size: 1.1rem;
-        }
-
-        /* Controls */
-        .controls-container {
-            max-width: 1160px;
-            margin: 0 auto 28px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        .search-box {
-            width: 100%;
-            padding: 14px 20px;
-            font-size: 1.05rem;
-            background: #1e293b;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 14px;
-            color: #fff;
-            outline: none;
-            transition: all 0.2s;
-        }
-        .search-box:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-        }
-        .filter-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-        }
-        .filter-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-right: 6px;
-            font-weight: 600;
-        }
-        .filter-btn {
-            background: #1e293b;
-            color: var(--text-sub);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 6px 14px;
-            border-radius: 9999px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.15s;
-        }
-        .filter-btn:hover {
-            color: #fff;
-            background: #334155;
-        }
-        .filter-btn.active {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
         }
 
         /* Grid */
         .quiz-grid {
-            max-width: 1160px;
+            max-width: 600px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
         .quiz-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 18px;
-            padding: 24px;
+            border-radius: 20px;
+            padding: 28px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
         .quiz-card:hover {
             background: var(--bg-card-hover);
             transform: translateY(-4px);
-            border-color: rgba(59, 130, 246, 0.4);
-            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
         .card-header {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
+            gap: 14px;
+            margin-bottom: 16px;
         }
         .icon-bubble {
-            font-size: 1.8rem;
+            font-size: 2rem;
             background: rgba(255, 255, 255, 0.05);
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             flex-shrink: 0;
         }
         .badges {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 8px;
         }
         .badge {
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.78rem;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.82rem;
             font-weight: 700;
         }
         .badge-sub {
@@ -197,28 +119,27 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
         .card-title {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             line-height: 1.4;
         }
         .card-scope {
-            font-size: 0.88rem;
+            font-size: 0.92rem;
             color: var(--text-sub);
-            margin-bottom: 18px;
-            flex-grow: 1;
+            margin-bottom: 22px;
         }
         .card-url-box {
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 10px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 14px;
-            font-size: 0.82rem;
+            margin-bottom: 18px;
+            font-size: 0.88rem;
             font-family: monospace;
             color: #94a3b8;
         }
@@ -226,16 +147,15 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            max-width: 220px;
         }
         .btn-copy {
             background: rgba(255, 255, 255, 0.1);
             color: #e2e8f0;
             border: none;
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 6px 12px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             font-family: inherit;
             transition: all 0.15s;
         }
@@ -252,19 +172,21 @@
             background: var(--primary);
             color: #ffffff;
             text-decoration: none;
-            padding: 10px 16px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 0.92rem;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
         }
         .btn-launch:hover {
             background: var(--primary-hover);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
         }
         .btn-launch .arrow {
             transition: transform 0.2s;
@@ -273,7 +195,6 @@
             transform: translateX(4px);
         }
 
-        /* Toast notification */
         #toast {
             position: fixed;
             bottom: 30px;
@@ -298,38 +219,13 @@
 <body>
     <header class="header">
         <div class="main-badge">🔬 國中自然科理化・數位學習大廳</div>
-        <h1>互動語音解題動畫・單元題庫系統</h1>
-        <p class="subtitle">依據章節、版本與測驗回數分類，點擊進入測驗或直接複製專屬短網址分享給學生複習</p>
-        <div class="password-banner">
-            <span>🔐 所有單元均已受 PageCrypt 安全加密保護，統一解密通關密碼：</span>
-            <code>chenhan</code>
-        </div>
+        <h1>互動語音解題動畫</h1>
+        <p class="subtitle">點擊進入測驗動畫，或點擊按鈕複製專屬短網址分享給學生複習</p>
     </header>
-
-    <div class="controls-container">
-        <input type="text" id="searchInput" class="search-box" placeholder="🔍 搜尋單元關鍵字、回數、章節或概念（例如：波動、光、比熱、金安第7回）...">
-        
-        <div class="filter-row">
-            <span class="filter-label">版本分類：</span>
-            <button class="filter-btn active" data-type="version" data-val="all">全部版本</button>
-            <button class="filter-btn" data-type="version" data-val="nani">南一版</button>
-            <button class="filter-btn" data-type="version" data-val="jinan">金安版</button>
-            <button class="filter-btn" data-type="version" data-val="quiz">隨堂小考</button>
-        </div>
-
-        <div class="filter-row">
-            <span class="filter-label">章節範圍：</span>
-            <button class="filter-btn active" data-type="chapter" data-val="all">全部章節</button>
-            <button class="filter-btn" data-type="chapter" data-val="ch3">第3章 波動與聲音</button>
-            <button class="filter-btn" data-type="chapter" data-val="ch4">第4章 光與影像</button>
-            <button class="filter-btn" data-type="chapter" data-val="ch5">第5章 溫度與熱</button>
-            <button class="filter-btn" data-type="chapter" data-val="ch6">第6章 物質世界</button>
-        </div>
-    </div>
 
     <main class="quiz-grid" id="quizGrid">
         
-        <div class="quiz-card" data-version="nani" data-chapter="ch3" data-search="南一自然3 第6回：§3-1～§3-2 波動與聲音的世界 力學波與電磁波、橫波與縱波、波速公式 v=f·λ、傳聲介質與聲速（全卷 30 題教師詳解） 南一版 第 6 回">
+        <div class="quiz-card" data-version="nani" data-chapter="ch3" data-search="南一自然3 第6回：§3-1～§3-2 波動與聲音的世界 波速公式、橫波縱波、傳聲介質（全卷 30 題動態語音解題動畫） 南一版 第 6 回">
             <div class="card-header">
                 <span class="icon-bubble">🌊</span>
                 <div class="badges">
@@ -338,266 +234,13 @@
                 </div>
             </div>
             <h3 class="card-title">南一自然3 第6回：§3-1～§3-2 波動與聲音的世界</h3>
-            <p class="card-scope">力學波與電磁波、橫波與縱波、波速公式 v=f·λ、傳聲介質與聲速（全卷 30 題教師詳解）</p>
+            <p class="card-scope">波速公式、橫波縱波、傳聲介質（全卷 30 題動態語音解題動畫）</p>
             <div class="card-url-box">
                 <span class="url-text">/nani-ch3-waves.html</span>
                 <button class="btn-copy" onclick="copyLink('nani-ch3-waves.html', this)">📋 複製網址</button>
             </div>
             <div class="card-actions">
-                <a href="nani-ch3-waves.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="jinan" data-chapter="ch3" data-search="金安自然3 第5回：§3-1～§3-2 波的傳播與聲音 波的分類與性質、連續週期波振幅與波長、聲音的產生與傳播特性 金安版 第 5 回">
-            <div class="card-header">
-                <span class="icon-bubble">🔊</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #10b98120; color: #10b981; border: 1px solid #10b98150;">金安版 第 5 回</span>
-                    <span class="badge badge-sub">第3章 波動與聲音</span>
-                </div>
-            </div>
-            <h3 class="card-title">金安自然3 第5回：§3-1～§3-2 波的傳播與聲音</h3>
-            <p class="card-scope">波的分類與性質、連續週期波振幅與波長、聲音的產生與傳播特性</p>
-            <div class="card-url-box">
-                <span class="url-text">/jinan-ch3-waves.html</span>
-                <button class="btn-copy" onclick="copyLink('jinan-ch3-waves.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="jinan-ch3-waves.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="jinan" data-chapter="ch3" data-search="金安自然3 第6回：§3-3～§3-4 回聲與多變的聲音 回聲反射原理、聲納測距計算、響度／音調／音色三要素與樂音 金安版 第 6 回">
-            <div class="card-header">
-                <span class="icon-bubble">⛰️</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #10b98120; color: #10b981; border: 1px solid #10b98150;">金安版 第 6 回</span>
-                    <span class="badge badge-sub">第3章 波動與聲音</span>
-                </div>
-            </div>
-            <h3 class="card-title">金安自然3 第6回：§3-3～§3-4 回聲與多變的聲音</h3>
-            <p class="card-scope">回聲反射原理、聲納測距計算、響度／音調／音色三要素與樂音</p>
-            <div class="card-url-box">
-                <span class="url-text">/jinan-ch3-echo.html</span>
-                <button class="btn-copy" onclick="copyLink('jinan-ch3-echo.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="jinan-ch3-echo.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="jinan" data-chapter="ch4" data-search="金安自然3 第7回：§4-1～§4-2 光的直線傳播與反射 光速與影子的形成、針孔成像、反射定律、平面鏡與曲面鏡成像規律 金安版 第 7 回">
-            <div class="card-header">
-                <span class="icon-bubble">💡</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #10b98120; color: #10b981; border: 1px solid #10b98150;">金安版 第 7 回</span>
-                    <span class="badge badge-sub">第4章 光與影像</span>
-                </div>
-            </div>
-            <h3 class="card-title">金安自然3 第7回：§4-1～§4-2 光的直線傳播與反射</h3>
-            <p class="card-scope">光速與影子的形成、針孔成像、反射定律、平面鏡與曲面鏡成像規律</p>
-            <div class="card-url-box">
-                <span class="url-text">/jinan-ch4-light.html</span>
-                <button class="btn-copy" onclick="copyLink('jinan-ch4-light.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="jinan-ch4-light.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="jinan" data-chapter="ch4" data-search="金安自然3 第8回：§4-3～§4-5 光的折射與光學色光 光線偏折規律、透鏡成像作圖、顯微鏡與照相機光學、色光三原色與物體顏色 金安版 第 8 回">
-            <div class="card-header">
-                <span class="icon-bubble">🌈</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #10b98120; color: #10b981; border: 1px solid #10b98150;">金安版 第 8 回</span>
-                    <span class="badge badge-sub">第4章 光與影像</span>
-                </div>
-            </div>
-            <h3 class="card-title">金安自然3 第8回：§4-3～§4-5 光的折射與光學色光</h3>
-            <p class="card-scope">光線偏折規律、透鏡成像作圖、顯微鏡與照相機光學、色光三原色與物體顏色</p>
-            <div class="card-url-box">
-                <span class="url-text">/jinan-ch4-refraction.html</span>
-                <button class="btn-copy" onclick="copyLink('jinan-ch4-refraction.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="jinan-ch4-refraction.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="quiz" data-chapter="ch4" data-search="隨堂小考：4-1～4-2 光的傳播與面鏡成像 光直線傳播實驗、平面鏡虛像特性、凹面鏡與凸面鏡成像判別 隨堂小考 隨堂測驗">
-            <div class="card-header">
-                <span class="icon-bubble">🪞</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #f59e0b20; color: #f59e0b; border: 1px solid #f59e0b50;">隨堂小考 隨堂測驗</span>
-                    <span class="badge badge-sub">第4章 光與影像</span>
-                </div>
-            </div>
-            <h3 class="card-title">隨堂小考：4-1～4-2 光的傳播與面鏡成像</h3>
-            <p class="card-scope">光直線傳播實驗、平面鏡虛像特性、凹面鏡與凸面鏡成像判別</p>
-            <div class="card-url-box">
-                <span class="url-text">/quiz-4-1-mirrors.html</span>
-                <button class="btn-copy" onclick="copyLink('quiz-4-1-mirrors.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="quiz-4-1-mirrors.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="quiz" data-chapter="ch4" data-search="隨堂小考：4-3 光的折射與透鏡 凸透鏡實像與虛像位置、凹透鏡成像、焦距與物距像距綜合題 隨堂小考 隨堂測驗">
-            <div class="card-header">
-                <span class="icon-bubble">🔍</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #f59e0b20; color: #f59e0b; border: 1px solid #f59e0b50;">隨堂小考 隨堂測驗</span>
-                    <span class="badge badge-sub">第4章 光與影像</span>
-                </div>
-            </div>
-            <h3 class="card-title">隨堂小考：4-3 光的折射與透鏡</h3>
-            <p class="card-scope">凸透鏡實像與虛像位置、凹透鏡成像、焦距與物距像距綜合題</p>
-            <div class="card-url-box">
-                <span class="url-text">/quiz-4-3-lens.html</span>
-                <button class="btn-copy" onclick="copyLink('quiz-4-3-lens.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="quiz-4-3-lens.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="quiz" data-chapter="ch4" data-search="隨堂小考：4-4～4-5 光學儀器與光色 複式顯微鏡成像光路、望遠鏡、眼睛近視與遠視矯正鏡片、色光混合與過濾 隨堂小考 隨堂測驗">
-            <div class="card-header">
-                <span class="icon-bubble">🔬</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #f59e0b20; color: #f59e0b; border: 1px solid #f59e0b50;">隨堂小考 隨堂測驗</span>
-                    <span class="badge badge-sub">第4章 光與影像</span>
-                </div>
-            </div>
-            <h3 class="card-title">隨堂小考：4-4～4-5 光學儀器與光色</h3>
-            <p class="card-scope">複式顯微鏡成像光路、望遠鏡、眼睛近視與遠視矯正鏡片、色光混合與過濾</p>
-            <div class="card-url-box">
-                <span class="url-text">/quiz-4-4-optical.html</span>
-                <button class="btn-copy" onclick="copyLink('quiz-4-4-optical.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="quiz-4-4-optical.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="quiz" data-chapter="ch5" data-search="隨堂小考：5-1 溫度與溫度計 攝氏與華氏溫標換算、自製液體溫度計原理、熱膨脹係數與溫度測量 隨堂小考 隨堂測驗">
-            <div class="card-header">
-                <span class="icon-bubble">🌡️</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #ef444420; color: #ef4444; border: 1px solid #ef444450;">隨堂小考 隨堂測驗</span>
-                    <span class="badge badge-sub">第5章 溫度與熱</span>
-                </div>
-            </div>
-            <h3 class="card-title">隨堂小考：5-1 溫度與溫度計</h3>
-            <p class="card-scope">攝氏與華氏溫標換算、自製液體溫度計原理、熱膨脹係數與溫度測量</p>
-            <div class="card-url-box">
-                <span class="url-text">/quiz-5-1-temperature.html</span>
-                <button class="btn-copy" onclick="copyLink('quiz-5-1-temperature.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="quiz-5-1-temperature.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="quiz" data-chapter="ch5" data-search="隨堂小考：5-2 熱量與比熱 H=m·s·ΔT 公式計算、熱平衡與熱量守恆、不同物質比熱大小曲線圖表判讀 隨堂小考 隨堂測驗">
-            <div class="card-header">
-                <span class="icon-bubble">🔥</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #ef444420; color: #ef4444; border: 1px solid #ef444450;">隨堂小考 隨堂測驗</span>
-                    <span class="badge badge-sub">第5章 溫度與熱</span>
-                </div>
-            </div>
-            <h3 class="card-title">隨堂小考：5-2 熱量與比熱</h3>
-            <p class="card-scope">H=m·s·ΔT 公式計算、熱平衡與熱量守恆、不同物質比熱大小曲線圖表判讀</p>
-            <div class="card-url-box">
-                <span class="url-text">/quiz-5-2-heat-capacity.html</span>
-                <button class="btn-copy" onclick="copyLink('quiz-5-2-heat-capacity.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="quiz-5-2-heat-capacity.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="quiz" data-chapter="ch5" data-search="隨堂小考：5-3 熱對物質的影響 ＆ 5-4 熱的傳播 物質三態變化與熔化/汽化熱、傳導/對流/輻射散熱實例、保溫瓶隔熱設計 隨堂小考 隨堂測驗">
-            <div class="card-header">
-                <span class="icon-bubble">☀️</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #ef444420; color: #ef4444; border: 1px solid #ef444450;">隨堂小考 隨堂測驗</span>
-                    <span class="badge badge-sub">第5章 溫度與熱</span>
-                </div>
-            </div>
-            <h3 class="card-title">隨堂小考：5-3 熱對物質的影響 ＆ 5-4 熱的傳播</h3>
-            <p class="card-scope">物質三態變化與熔化/汽化熱、傳導/對流/輻射散熱實例、保溫瓶隔熱設計</p>
-            <div class="card-url-box">
-                <span class="url-text">/quiz-5-3-heat-transfer.html</span>
-                <button class="btn-copy" onclick="copyLink('quiz-5-3-heat-transfer.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="quiz-5-3-heat-transfer.html" target="_blank" class="btn-launch">
-                    <span>進入測驗解題動畫</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="quiz-card" data-version="quiz" data-chapter="ch6" data-search="隨堂小考：6-1～6-2 元素與純物質 元素與化合物之定義、常見金屬與非金屬元素之常溫狀態與導電導熱物理化學性質 隨堂小考 隨堂測驗">
-            <div class="card-header">
-                <span class="icon-bubble">🧪</span>
-                <div class="badges">
-                    <span class="badge" style="background-color: #8b5cf620; color: #8b5cf6; border: 1px solid #8b5cf650;">隨堂小考 隨堂測驗</span>
-                    <span class="badge badge-sub">第6章 物質的世界</span>
-                </div>
-            </div>
-            <h3 class="card-title">隨堂小考：6-1～6-2 元素與純物質</h3>
-            <p class="card-scope">元素與化合物之定義、常見金屬與非金屬元素之常溫狀態與導電導熱物理化學性質</p>
-            <div class="card-url-box">
-                <span class="url-text">/quiz-6-1-matter.html</span>
-                <button class="btn-copy" onclick="copyLink('quiz-6-1-matter.html', this)">📋 複製網址</button>
-            </div>
-            <div class="card-actions">
-                <a href="quiz-6-1-matter.html" target="_blank" class="btn-launch">
+                <a href="nani-ch3-waves.html" class="btn-launch">
                     <span>進入測驗解題動畫</span>
                     <span class="arrow">→</span>
                 </a>
@@ -628,45 +271,6 @@
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 2500);
         }
-
-        // Filter & Search Logic
-        const searchInput = document.getElementById('searchInput');
-        const cards = document.querySelectorAll('.quiz-card');
-        let currentVersion = 'all';
-        let currentChapter = 'all';
-
-        function filterCards() {
-            const query = searchInput.value.toLowerCase().trim();
-            cards.forEach(card => {
-                const matchVersion = (currentVersion === 'all') || (card.getAttribute('data-version') === currentVersion);
-                const matchChapter = (currentChapter === 'all') || (card.getAttribute('data-chapter') === currentChapter);
-                const searchData = card.getAttribute('data-search').toLowerCase();
-                const matchQuery = !query || searchData.includes(query);
-
-                if (matchVersion && matchChapter && matchQuery) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        searchInput.addEventListener('input', filterCards);
-
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const type = this.getAttribute('data-type');
-                const val = this.getAttribute('data-val');
-
-                document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-
-                if (type === 'version') currentVersion = val;
-                if (type === 'chapter') currentChapter = val;
-
-                filterCards();
-            });
-        });
     </script>
 </body>
 </html>
